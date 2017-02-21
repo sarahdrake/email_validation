@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Successful Email Validation</title>
+  </head>
+  <body>
+    <h1>List of registered emails</h1>
+    {% if messages %}
+      {% for message in messages %}
+        <h3>{{message}}</h3>
+      {% endfor %}
+    {% endif %}
+    {% for user in users %}
+    <p>{{ user.email}} {{user.created_at}}</p>
+    {% endfor %}
+  </body>
+</html>
